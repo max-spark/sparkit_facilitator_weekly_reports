@@ -1,0 +1,58 @@
+<openerp>
+  <data>
+
+    <record model="ir.ui.view" id="sparkit_fwr_list">
+      <field name="name">sparkit.fwr.list</field>
+      <field name="model">sparkit.facilitator_weekly_reports</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="created_date"/>
+          <field name="user_id"/>
+          <field name="program_manager_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sparkit_fwr_form">
+      <field name="name">sparkit.fwr.form</field>
+      <field name="model">sparkit.facilitator_weekly_reports</field>
+      <field name="arch" type="xml">
+        <form string="Facilitator Weekly Report Form">
+          <sheet>
+            <group colspan="4" col="4" class="no_style">
+              <group colspan="2" col="2">
+                <field name="name" invisible="1"/>
+                <field name="user_id" options="{'no_create': True}"/>
+                <field name="program_manager_id" options="{'no_create': True}"/>
+                <field name="created_date" invisible="1"/>
+                <field name="highlights"/>
+                <field name="challenges"/>
+                <field name="ideas"/>
+              </group>
+              <group colspan="2" col="2">
+                <field name="questions"/>
+                <field name="suggestions"/>
+                <field name="ideas_team_mtg"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="fwr_list_action">
+      <field name="name">Facilitator Weekly Reports</field>
+      <field name="res_model">sparkit.facilitator_weekly_reports</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">Create the first VRF!</p>
+      </field>
+    </record>
+
+    <menuitem name="Fac. Weekly Reports"
+        id="sparkit_facilitator_weekly_reports.menu_root"
+        action="fwr_list_action"/>
+
+  </data>
+</openerp>

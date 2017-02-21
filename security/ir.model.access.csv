@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sparkit_fwr,sparkit.facilitator_weekly_reports,model_sparkit_fwr_,,1,1,1,1
