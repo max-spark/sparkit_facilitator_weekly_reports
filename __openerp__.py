@@ -24,7 +24,7 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/facilitator_weekly_reports_views.xml',
     ],
     # only loaded in demonstration mode

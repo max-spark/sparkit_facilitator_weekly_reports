@@ -50,8 +50,24 @@
       </field>
     </record>
 
-    <menuitem name="Fac. Weekly Reports"
-        id="sparkit_facilitator_weekly_reports.menu_root"
+    <record model="ir.actions.act_window" id="fwr_list_action_facs">
+      <field name="name">Facilitator Weekly Reports</field>
+      <field name="res_model">sparkit.facilitator_weekly_reports</field>
+      <field name="domain">[('user_id', '=', uid)]</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">Create the first Facilitator Weekly Report!</p>
+      </field>
+    </record>
+
+    <menuitem name="Facilitator Weekly Reports"
+        id="sparkit_facilitator_weekly_reports.menu_root_fac"
+        groups="sparkit.facilitator"
+        action="fwr_list_action_facs"/>
+
+    <menuitem name="Facilitator Weekly Reports"
+        id="sparkit_facilitator_weekly_reports.menu_root_global"
+        groups="sparkit.global"
         action="fwr_list_action"/>
 
   </data>

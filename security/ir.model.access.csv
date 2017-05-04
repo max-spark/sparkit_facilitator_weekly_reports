@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sparkit_fwr,sparkit.facilitator_weekly_reports,model_sparkit_fwr_,,1,1,1,1
+access_sparkit_fwr_fac,sparkit.facilitator_weekly_reports,model_sparkit_facilitator_weekly_reports,sparkit.facilitator,1,1,1,1
+access_sparkit_fwr_pm,sparkit.facilitator_weekly_reports,model_sparkit_facilitator_weekly_reports,sparkit.program_manager,1,1,1,1
+access_sparkit_fwr_global,sparkit.facilitator_weekly_reports,model_sparkit_facilitator_weekly_reports,sparkit.global,1,1,1,1
