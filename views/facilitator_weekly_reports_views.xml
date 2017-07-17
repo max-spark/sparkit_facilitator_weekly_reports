@@ -33,6 +33,7 @@
                 <field name="questions"/>
                 <field name="suggestions"/>
                 <field name="ideas_team_mtg"/>
+                <field name="next_steps" groups="sparkit.program_manager"/>
               </group>
             </group>
           </sheet>

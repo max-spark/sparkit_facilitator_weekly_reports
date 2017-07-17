@@ -38,6 +38,9 @@ class FaciltiatorWeeklyReports(models.Model):
     ideas_team_mtg = fields.Text(string="Ideas for Team Meetings",
         track_visibility='onchange')
 
+
+    next_steps = fields.Text(string="Program Manager: Next Steps")
+
     @api.multi
     def _get_name(self):
         for r in self:
