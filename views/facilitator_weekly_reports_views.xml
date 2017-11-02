@@ -5,7 +5,7 @@
       <field name="name">sparkit.fwr.list</field>
       <field name="model">sparkit.facilitator_weekly_reports</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree default_order="write_date desc">
           <field name="created_date"/>
           <field name="user_id"/>
           <field name="program_manager_id"/>
