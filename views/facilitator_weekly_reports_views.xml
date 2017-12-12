@@ -68,7 +68,7 @@
 
     <menuitem name="Facilitator Weekly Reports"
         id="sparkit_facilitator_weekly_reports.menu_root_global"
-        groups="sparkit.global"
+        groups="sparkit.m_e_user"
         action="fwr_list_action"/>
 
   </data>
