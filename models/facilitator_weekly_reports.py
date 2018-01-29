@@ -8,7 +8,7 @@ class FaciltiatorWeeklyReports(models.Model):
     _inherit = 'mail.thread'
 
     name = fields.Char(compute='_get_name')
-    created_date = fields.Date(string="Created Date", default=date.today(),
+    created_date = fields.Date(string="Created Date", compute='_get_date',
         readonly=True)
 
     user_id = fields.Many2one('res.users', string="User",
@@ -45,3 +45,8 @@ class FaciltiatorWeeklyReports(models.Model):
     def _get_name(self):
         for r in self:
             r.name =  r.user_id.name + ": " + r.created_date
+
+    @api.multi
+    def _get_date(self):
+        for r in self:
+            r.created_date = r.create_date
